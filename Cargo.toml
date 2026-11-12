@@ -1,0 +1,45 @@
+[package]
+name = "bevy_anim"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = {
+    git = "https://github.com/Johannes0021/bevy.git",
+    #branch = "main", # To verify that the example doesn't work on main
+    branch = "bevy_animation_fix_event_with_target",
+    default-features = false,
+    features = [
+        #"android-game-activity",
+        "default_app",
+
+        # 2d_api
+        "bevy_animation",
+        "bevy_camera",
+        "bevy_color",
+        "bevy_curve",
+        "bevy_image",
+        "bevy_window",
+        "png",
+        "bevy_sprite",
+
+        # 2d_bevy_render
+        "bevy_render",
+        "bevy_core_pipeline",
+        "bevy_sprite_render",
+
+        # default_platform
+        "std",
+        "bevy_winit",
+        #"multi_threaded",
+        "webgl2",
+        "x11",
+        "wayland",
+        #"custom_cursor",
+        "sysinfo_plugin",
+
+        # picking
+        "bevy_picking",
+        "sprite_picking",
+    ],
+}
